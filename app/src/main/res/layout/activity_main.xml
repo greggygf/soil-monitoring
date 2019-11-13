@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="halo greg!"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="hari yang cerah ea"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textName" />
+
+    <ImageView
+        android:id="@+id/iconTemperature"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/temperature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iconWater"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconWater"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/water"
+        app:layout_constraintBottom_toBottomOf="@id/iconTemperature"
+        app:layout_constraintEnd_toStartOf="@id/iconWet"
+        app:layout_constraintStart_toEndOf="@id/iconTemperature"
+        app:layout_constraintTop_toTopOf="@id/iconTemperature" />
+
+    <ImageView
+        android:id="@+id/iconWet"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/wet"
+        app:layout_constraintBottom_toBottomOf="@id/iconWater"
+        app:layout_constraintEnd_toStartOf="@id/iconWind"
+        app:layout_constraintStart_toEndOf="@id/iconWater"
+        app:layout_constraintTop_toTopOf="@id/iconWater" />
+
+    <ImageView
+        android:id="@+id/iconWind"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/air"
+        app:layout_constraintBottom_toBottomOf="@id/iconWet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iconWet"
+        app:layout_constraintTop_toTopOf="@id/iconWet" />
+
+    <TextView
+        android:id="@+id/textTemperature"
+        style="@style/fontInfo"
+        android:layout_marginTop="15dp"
+        android:text="18°"
+        app:layout_constraintEnd_toEndOf="@id/iconTemperature"
+        app:layout_constraintStart_toStartOf="@id/iconTemperature"
+        app:layout_constraintTop_toBottomOf="@id/iconTemperature" />
+
+    <TextView
+        android:id="@+id/textWater"
+        style="@style/fontInfo"
+        android:text="75%"
+        app:layout_constraintBottom_toBottomOf="@id/textTemperature"
+        app:layout_constraintEnd_toEndOf="@id/iconWater"
+        app:layout_constraintStart_toStartOf="@id/iconWater"
+        app:layout_constraintTop_toTopOf="@id/textTemperature" />
+
+    <TextView
+        android:id="@+id/textWet"
+        style="@style/fontInfo"
+        android:text="50%"
+        app:layout_constraintBottom_toBottomOf="@id/textTemperature"
+        app:layout_constraintEnd_toEndOf="@id/iconWet"
+        app:layout_constraintStart_toStartOf="@id/iconWet"
+        app:layout_constraintTop_toTopOf="@id/textTemperature" />
+
+    <TextView
+        android:id="@+id/textWind"
+        style="@style/fontInfo"
+        android:text="34%"
+        app:layout_constraintBottom_toBottomOf="@id/textTemperature"
+        app:layout_constraintEnd_toEndOf="@id/iconWind"
+        app:layout_constraintStart_toStartOf="@id/iconWind"
+        app:layout_constraintTop_toTopOf="@id/textTemperature" />
+
+    <TextView
+        android:id="@+id/titleTemperature"
+        style="@style/fontInfo"
+        android:text="SUHU"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/iconTemperature"
+        app:layout_constraintEnd_toEndOf="@id/iconTemperature"
+        app:layout_constraintStart_toStartOf="@id/iconTemperature" />
+
+    <TextView
+        android:id="@+id/titleWater"
+        style="@style/fontInfo"
+        android:text="AIR"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/titleTemperature"
+        app:layout_constraintBottom_toTopOf="@id/iconWater"
+        app:layout_constraintEnd_toEndOf="@id/iconWater"
+        app:layout_constraintStart_toStartOf="@id/iconWater"
+        app:layout_constraintTop_toTopOf="@id/titleTemperature" />
+
+    <TextView
+        android:id="@+id/titleWet"
+        style="@style/fontInfo"
+        android:text="LEMBAB"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/titleWater"
+        app:layout_constraintBottom_toTopOf="@id/iconWet"
+        app:layout_constraintEnd_toEndOf="@id/iconWet"
+        app:layout_constraintStart_toStartOf="@id/iconWet"
+        app:layout_constraintTop_toTopOf="@id/titleWater" />
+
+    <TextView
+        android:id="@+id/titleWind"
+        style="@style/fontInfo"
+        android:text="ANGIN"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/titleTemperature"
+        app:layout_constraintBottom_toTopOf="@id/iconWind"
+        app:layout_constraintEnd_toEndOf="@id/iconWind"
+        app:layout_constraintStart_toStartOf="@id/iconWind"
+        app:layout_constraintTop_toTopOf="@id/titleTemperature" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
