@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Soil Monitoring</string>
+    <string name="suhu">SUHU</string>
+    <string name="air">AIR</string>
+    <string name="kelembaban">KELEMBABAN</string>
+    <string name="oksigen">OKSIGEN</string>
 </resources>

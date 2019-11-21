@@ -10,7 +10,7 @@ import com.bluohazard.soilmonitoring.R;
 import com.bluohazard.soilmonitoring.models.Soil;
 
 public class SoilViewHolder extends RecyclerView.ViewHolder {
-    public TextView tvSuhu, tvAir, tvKelembaban, tvOksigen;
+    private TextView tvSuhu, tvAir, tvKelembaban, tvOksigen;
 
     public SoilViewHolder(@NonNull View itemView) {
         super(itemView);

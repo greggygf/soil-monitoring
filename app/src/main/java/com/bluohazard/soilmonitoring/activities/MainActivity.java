@@ -1,15 +1,10 @@
 package com.bluohazard.soilmonitoring.activities;
 
-import androidx.annotation.NonNull;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.bluohazard.soilmonitoring.R;
 import com.bluohazard.soilmonitoring.models.Soil;

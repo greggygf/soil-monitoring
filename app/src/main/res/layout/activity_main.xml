@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="halo greg!"
+        android:text="(tanggal)"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,14 +24,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_regular"
-        android:text="hari yang cerah ea"
+        android:text="(opo iki)"
         android:textColor="#FFFFFF"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textName" />
 
     <ImageView
+        android:contentDescription="icon suhu"
         android:id="@+id/iconTemperature"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -42,6 +43,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
+        android:contentDescription="icon air"
         android:id="@+id/iconWater"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -52,6 +54,7 @@
         app:layout_constraintTop_toTopOf="@id/iconTemperature" />
 
     <ImageView
+        android:contentDescription="icon kelembaban"
         android:id="@+id/iconWet"
         android:layout_width="50dp"
         android:layout_height="40dp"
@@ -62,6 +65,7 @@
         app:layout_constraintTop_toTopOf="@id/iconWater" />
 
     <ImageView
+        android:contentDescription="icon oksigen"
         android:id="@+id/iconWind"
         android:layout_width="50dp"
         android:layout_height="40dp"
@@ -111,7 +115,7 @@
         android:id="@+id/titleTemperature"
         style="@style/fontInfo"
         android:layout_marginBottom="15dp"
-        android:text="SUHU"
+        android:text="@string/suhu"
         app:layout_constraintBottom_toTopOf="@id/iconTemperature"
         app:layout_constraintEnd_toEndOf="@id/iconTemperature"
         app:layout_constraintStart_toStartOf="@id/iconTemperature" />
@@ -120,7 +124,7 @@
         android:id="@+id/titleWater"
         style="@style/fontInfo"
         android:layout_marginBottom="15dp"
-        android:text="AIR"
+        android:text="@string/air"
         app:layout_constraintBottom_toBottomOf="@id/titleTemperature"
         app:layout_constraintBottom_toTopOf="@id/iconWater"
         app:layout_constraintEnd_toEndOf="@id/iconWater"
@@ -131,7 +135,7 @@
         android:id="@+id/titleWet"
         style="@style/fontInfo"
         android:layout_marginBottom="20dp"
-        android:text="KELEMBABAN"
+        android:text="@string/kelembaban"
         app:layout_constraintBottom_toBottomOf="@id/titleWater"
         app:layout_constraintBottom_toTopOf="@id/iconWet"
         app:layout_constraintEnd_toEndOf="@id/iconWet"
@@ -142,7 +146,7 @@
         android:id="@+id/titleWind"
         style="@style/fontInfo"
         android:layout_marginBottom="20dp"
-        android:text="OKSIGEN"
+        android:text="@string/oksigen"
         app:layout_constraintBottom_toBottomOf="@id/titleTemperature"
         app:layout_constraintBottom_toTopOf="@id/iconWind"
         app:layout_constraintEnd_toEndOf="@id/iconWind"
