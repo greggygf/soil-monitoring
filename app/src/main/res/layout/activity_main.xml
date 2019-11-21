@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:id="@+id/textName"
@@ -110,8 +110,8 @@
     <TextView
         android:id="@+id/titleTemperature"
         style="@style/fontInfo"
-        android:text="SUHU"
         android:layout_marginBottom="15dp"
+        android:text="SUHU"
         app:layout_constraintBottom_toTopOf="@id/iconTemperature"
         app:layout_constraintEnd_toEndOf="@id/iconTemperature"
         app:layout_constraintStart_toStartOf="@id/iconTemperature" />
@@ -119,8 +119,8 @@
     <TextView
         android:id="@+id/titleWater"
         style="@style/fontInfo"
-        android:text="AIR"
         android:layout_marginBottom="15dp"
+        android:text="AIR"
         app:layout_constraintBottom_toBottomOf="@id/titleTemperature"
         app:layout_constraintBottom_toTopOf="@id/iconWater"
         app:layout_constraintEnd_toEndOf="@id/iconWater"
@@ -130,8 +130,8 @@
     <TextView
         android:id="@+id/titleWet"
         style="@style/fontInfo"
-        android:text="LEMBAB"
         android:layout_marginBottom="20dp"
+        android:text="KELEMBABAN"
         app:layout_constraintBottom_toBottomOf="@id/titleWater"
         app:layout_constraintBottom_toTopOf="@id/iconWet"
         app:layout_constraintEnd_toEndOf="@id/iconWet"
@@ -141,8 +141,8 @@
     <TextView
         android:id="@+id/titleWind"
         style="@style/fontInfo"
-        android:text="ANGIN"
         android:layout_marginBottom="20dp"
+        android:text="OKSIGEN"
         app:layout_constraintBottom_toBottomOf="@id/titleTemperature"
         app:layout_constraintBottom_toTopOf="@id/iconWind"
         app:layout_constraintEnd_toEndOf="@id/iconWind"
