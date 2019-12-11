@@ -7,14 +7,25 @@
     android:background="@drawable/background"
     tools:context=".activities.MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:onClick="onRandom"
+        android:src="@drawable/refresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/mydateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:textSize="34sp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="-"
         android:textColor="#ffffff"
-        android:text="date"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,48 +34,58 @@
         android:id="@+id/textClock1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:format24Hour="hh:mm:ss a"
-        android:paddingLeft="10dp"
-        android:text="clock"
+        android:fontFamily="@font/poppins_regular"
+        android:format24Hour="HH : mm : ss"
+        android:text="-"
         android:textColor="#ffffff"
         android:textSize="27sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/mydateText" />
 
     <TextView
         android:id="@+id/baro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="50 %"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="-"
         android:textColor="#ffffff"
         android:textSize="70sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/statusBaro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="-"
+        android:textSize="25sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/baro" />
 
     <ImageView
-        android:contentDescription="icon suhu"
         android:id="@+id/iconTemperature"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="100dp"
+        android:contentDescription="icon suhu"
         android:src="@drawable/temperature"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/iconWater"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:contentDescription="icon air"
         android:id="@+id/iconWater"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="icon air"
         android:src="@drawable/water"
         app:layout_constraintBottom_toBottomOf="@id/iconTemperature"
         app:layout_constraintEnd_toStartOf="@id/iconWet"
@@ -72,10 +93,10 @@
         app:layout_constraintTop_toTopOf="@id/iconTemperature" />
 
     <ImageView
-        android:contentDescription="icon kelembaban"
         android:id="@+id/iconWet"
         android:layout_width="50dp"
         android:layout_height="40dp"
+        android:contentDescription="icon kelembaban"
         android:src="@drawable/wet"
         app:layout_constraintBottom_toBottomOf="@id/iconWater"
         app:layout_constraintEnd_toStartOf="@id/iconWind"
@@ -83,10 +104,10 @@
         app:layout_constraintTop_toTopOf="@id/iconWater" />
 
     <ImageView
-        android:contentDescription="icon oksigen"
         android:id="@+id/iconWind"
         android:layout_width="50dp"
         android:layout_height="40dp"
+        android:contentDescription="icon oksigen"
         android:src="@drawable/air"
         app:layout_constraintBottom_toBottomOf="@id/iconWet"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +118,7 @@
         android:id="@+id/textTemperature"
         style="@style/fontInfo"
         android:layout_marginTop="15dp"
-        android:text="18°"
+        android:text="-"
         app:layout_constraintEnd_toEndOf="@id/iconTemperature"
         app:layout_constraintStart_toStartOf="@id/iconTemperature"
         app:layout_constraintTop_toBottomOf="@id/iconTemperature" />
@@ -105,7 +126,7 @@
     <TextView
         android:id="@+id/textWater"
         style="@style/fontInfo"
-        android:text="75%"
+        android:text="-"
         app:layout_constraintBottom_toBottomOf="@id/textTemperature"
         app:layout_constraintEnd_toEndOf="@id/iconWater"
         app:layout_constraintStart_toStartOf="@id/iconWater"
@@ -114,7 +135,7 @@
     <TextView
         android:id="@+id/textWet"
         style="@style/fontInfo"
-        android:text="50%"
+        android:text="-"
         app:layout_constraintBottom_toBottomOf="@id/textTemperature"
         app:layout_constraintEnd_toEndOf="@id/iconWet"
         app:layout_constraintStart_toStartOf="@id/iconWet"
@@ -123,7 +144,7 @@
     <TextView
         android:id="@+id/textWind"
         style="@style/fontInfo"
-        android:text="34%"
+        android:text="-"
         app:layout_constraintBottom_toBottomOf="@id/textTemperature"
         app:layout_constraintEnd_toEndOf="@id/iconWind"
         app:layout_constraintStart_toStartOf="@id/iconWind"
@@ -170,7 +191,6 @@
         app:layout_constraintEnd_toEndOf="@id/iconWind"
         app:layout_constraintStart_toStartOf="@id/iconWind"
         app:layout_constraintTop_toTopOf="@id/titleTemperature" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
