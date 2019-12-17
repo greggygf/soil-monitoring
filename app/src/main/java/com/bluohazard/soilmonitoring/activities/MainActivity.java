@@ -1,5 +1,6 @@
 package com.bluohazard.soilmonitoring.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextClock;
@@ -144,5 +145,11 @@ public class MainActivity extends AppCompatActivity {
         if (number == 4) {
             number = 0;
         }
+    }
+
+    public void history(View view) {
+        Intent intent = new Intent(MainActivity.this,History.class);
+        startActivity(intent);
+        finish();
     }
 }
