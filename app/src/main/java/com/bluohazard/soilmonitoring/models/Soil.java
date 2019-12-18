@@ -1,7 +1,5 @@
 package com.bluohazard.soilmonitoring.models;
 
-import android.view.View;
-
 import com.google.firebase.database.Exclude;
 
 import java.util.HashMap;
