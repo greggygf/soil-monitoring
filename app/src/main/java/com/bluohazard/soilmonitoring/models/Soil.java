@@ -1,5 +1,7 @@
 package com.bluohazard.soilmonitoring.models;
 
+import android.view.View;
+
 import com.google.firebase.database.Exclude;
 
 import java.util.HashMap;
@@ -10,15 +12,17 @@ public class Soil {
     public int kelembaban;
     public int oksigen;
     public int suhu;
+    public String tanggal;
 
     public Soil() {
     }
 
-    public Soil(int air, int kelembaban, int oksigen, int suhu) {
+    public Soil(int air, int kelembaban, int oksigen, int suhu, String tanggal) {
         this.air = air;
         this.kelembaban = kelembaban;
         this.oksigen = oksigen;
         this.suhu = suhu;
+        this.tanggal = tanggal;
     }
 
     public int getAir() {
@@ -53,6 +57,14 @@ public class Soil {
         this.suhu = suhu;
     }
 
+    public String getTanggal() {
+        return tanggal;
+    }
+
+    public void setTanggal(String tanggal) {
+        this.tanggal = tanggal;
+    }
+
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
@@ -60,6 +72,7 @@ public class Soil {
         result.put("kelembaban", kelembaban);
         result.put("oksigen", oksigen);
         result.put("suhu", suhu);
+        result.put("tanggal", tanggal);
         return result;
     }
 }

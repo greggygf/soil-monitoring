@@ -8,28 +8,18 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.bluohazard.soilmonitoring.R;
 import com.bluohazard.soilmonitoring.models.Soil;
-import com.bluohazard.soilmonitoring.viewholders.SoilViewHolder;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.annotations.Nullable;
 
 import java.text.SimpleDateFormat;
-import java.time.OffsetTime;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //time-------------------------------------------------------
-        tClock = (TextClock) findViewById(R.id.textClock1);
+        tClock = findViewById(R.id.textClock1);
         //-----------------------------------------------------------
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -82,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
          * diubah, dihapus dan dialihkan.
          */
 
-        getReference.child("tanah0").addValueEventListener(new ValueEventListener() {
+        getReference.child("tanah").child("tanah0").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Mengambil daftar item dari database, setiap kali ada turunannya
@@ -109,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRandom(View view) {
-        getReference.child("tanah" + number).addValueEventListener(new ValueEventListener() {
+        getReference.child("tanah").child("tanah" + number).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Mengambil daftar item dari database, setiap kali ada turunannya
@@ -142,13 +132,13 @@ public class MainActivity extends AppCompatActivity {
 
         number++;
 
-        if (number == 4) {
+        if (number == 5) {
             number = 0;
         }
     }
 
     public void history(View view) {
-        Intent intent = new Intent(MainActivity.this,History.class);
+        Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
         startActivity(intent);
         finish();
     }

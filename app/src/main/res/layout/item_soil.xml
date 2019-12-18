@@ -1,0 +1,134 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewBeach"
+    style="@style/CardView.Light"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCCCCC">
+
+        <TextView
+            android:id="@+id/tv_tanggal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="31 Desember 2019"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/lineVertical"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tanggal" />
+
+        <TextView
+            android:id="@+id/titleInformasiSuhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular  "
+            android:text="Suhu"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lineVertical" />
+
+        <TextView
+            android:id="@+id/nilaiInformasiSuhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="16°"
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@id/lineVertical"
+            app:layout_constraintStart_toStartOf="@id/titleInformasiSuhu"
+            app:layout_constraintTop_toBottomOf="@id/titleInformasiSuhu" />
+
+        <TextView
+            android:id="@+id/titleInformasiAir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Air"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/titleInformasiSuhu"
+            app:layout_constraintStart_toEndOf="@id/titleInformasiSuhu"
+            app:layout_constraintTop_toTopOf="@id/titleInformasiSuhu" />
+
+        <TextView
+            android:id="@+id/nilaiInformasiAir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="35%"
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@id/lineVertical"
+            app:layout_constraintStart_toStartOf="@id/titleInformasiAir"
+            app:layout_constraintTop_toBottomOf="@id/titleInformasiAir" />
+
+        <TextView
+            android:id="@+id/titleInformasiKelembaban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Kelembaban"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/titleInformasiAir"
+            app:layout_constraintStart_toEndOf="@id/titleInformasiAir"
+            app:layout_constraintTop_toTopOf="@id/titleInformasiAir" />
+
+        <TextView
+            android:id="@+id/nilaiInformasiKelemmbaban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="35%"
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@id/lineVertical"
+            app:layout_constraintStart_toStartOf="@id/titleInformasiKelembaban"
+            app:layout_constraintTop_toBottomOf="@id/titleInformasiKelembaban" />
+
+        <TextView
+            android:id="@+id/titleInformasiOksigen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Oksigen"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/titleInformasiKelembaban"
+            app:layout_constraintStart_toEndOf="@id/titleInformasiKelembaban"
+            app:layout_constraintTop_toTopOf="@id/titleInformasiKelembaban" />
+
+        <TextView
+            android:id="@+id/nilaiInformasiOksigen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="35%"
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@id/lineVertical"
+            app:layout_constraintStart_toStartOf="@id/titleInformasiOksigen"
+            app:layout_constraintTop_toBottomOf="@id/titleInformasiOksigen" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

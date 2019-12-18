@@ -10,10 +10,10 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="fitXY"
         android:src="@drawable/coba"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:scaleType="fitXY"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -67,18 +67,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:foregroundGravity="center"
-        android:gravity="center"
+        android:id="@+id/buttonHistory"
+        android:background="@drawable/button_primary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="80dp"
         android:onClick="history"
-        android:text="History"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="18dp"
+        android:text="Riwayat Tanah"
+        app:layout_constraintBottom_toTopOf="@id/titleTemperature"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708" />
+        app:layout_constraintTop_toBottomOf="@id/statusBaro" />
 
     <TextView
         android:id="@+id/statusBaro"
@@ -86,12 +89,11 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_regular"
         android:text="-"
-        android:textSize="25sp"
         android:textColor="#2D2F31"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/baro" />
-
 
 
     <ImageView
@@ -178,8 +180,8 @@
         android:id="@+id/titleTemperature"
         style="@style/fontInfo"
         android:layout_marginBottom="15dp"
-        android:text="@string/suhu"
         android:fontFamily="@font/poppins_bold"
+        android:text="@string/suhu"
         app:layout_constraintBottom_toTopOf="@id/iconTemperature"
         app:layout_constraintEnd_toEndOf="@id/iconTemperature"
         app:layout_constraintStart_toStartOf="@id/iconTemperature" />
@@ -188,8 +190,8 @@
         android:id="@+id/titleWater"
         style="@style/fontInfo"
         android:layout_marginBottom="15dp"
-        android:text="@string/air"
         android:fontFamily="@font/poppins_bold"
+        android:text="@string/air"
         app:layout_constraintBottom_toBottomOf="@id/titleTemperature"
         app:layout_constraintBottom_toTopOf="@id/iconWater"
         app:layout_constraintEnd_toEndOf="@id/iconWater"
@@ -200,8 +202,8 @@
         android:id="@+id/titleWet"
         style="@style/fontInfo"
         android:layout_marginBottom="20dp"
-        android:text="@string/kelembaban"
         android:fontFamily="@font/poppins_bold"
+        android:text="@string/kelembaban"
         app:layout_constraintBottom_toBottomOf="@id/titleWater"
         app:layout_constraintBottom_toTopOf="@id/iconWet"
         app:layout_constraintEnd_toEndOf="@id/iconWet"
@@ -212,14 +214,14 @@
         android:id="@+id/titleWind"
         style="@style/fontInfo"
         android:layout_marginBottom="20dp"
-        android:text="@string/oksigen"
         android:fontFamily="@font/poppins_bold"
+        android:text="@string/oksigen"
         app:layout_constraintBottom_toBottomOf="@id/titleTemperature"
         app:layout_constraintBottom_toTopOf="@id/iconWind"
         app:layout_constraintEnd_toEndOf="@id/iconWind"
         app:layout_constraintStart_toStartOf="@id/iconWind"
         app:layout_constraintTop_toTopOf="@id/titleTemperature" />
-        />
+    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

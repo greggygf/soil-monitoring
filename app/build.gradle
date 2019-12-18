@@ -31,6 +31,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:17.2.1'
     implementation 'com.google.firebase:firebase-database:19.2.0'
     implementation 'com.firebaseui:firebase-ui-database:4.0.0'
+
+    // circle button
+    implementation 'com.github.markushi:circlebutton:1.1'
+
+    // card view
+    implementation 'androidx.cardview:cardview:1.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
